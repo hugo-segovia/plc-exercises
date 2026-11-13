@@ -5,18 +5,18 @@ The fume extractor of a welding workshop is started and stopped from a push-butt
 
 ## I/O table
 
-| Symbol | Description | Type |
-|---|---|---|
-| S0 | Stop push button (red) | Input, NC |
-| S1 | Start push button (green) | Input, NO |
-| S9 | Emergency stop mushroom button (latching) | Input, NC |
-| F1 | Overload relay auxiliary contact (95-96) | Input, NC |
-| KM1 | Motor contactor | Output |
-| H1 | Green pilot light "fan running" | Output |
-| H2 | Red pilot light "overload tripped" | Output |
-| H3 | Pilot light "emergency stop" (blinking) | Output |
-| tT1, tT2 | TON timers (1 s each) for the blinking oscillator | Internal |
-| KA1, KA2 | Internal bits of the oscillator | Internal |
+| Symbol | Description | Type | Address |
+|---|---|---|---|
+| S0 | Stop push button (red) | Input, NC | I0.0 (%IX0.0) |
+| S1 | Start push button (green) | Input, NO | I0.1 (%IX0.1) |
+| F1 | Overload relay auxiliary contact (95-96) | Input, NC | I0.2 (%IX0.2) |
+| S9 | Emergency stop mushroom button (latching) | Input, NC | I0.3 (%IX0.3) |
+| KM1 | Motor contactor | Output | Q0.0 (%QX0.0) |
+| H1 | Green pilot light "fan running" | Output | Q0.1 (%QX0.1) |
+| H2 | Red pilot light "overload tripped" | Output | Q0.2 (%QX0.2) |
+| H3 | Pilot light "emergency stop" (blinking) | Output | Q0.3 (%QX0.3) |
+| tT1, tT2 | TON timers (1 s each) for the blinking oscillator | Internal | – |
+| KA1, KA2 | Internal bits of the oscillator | Internal | – |
 
 ## How it works
 - Pressing **S1** starts the motor; it keeps running after releasing the button (self-holding contact of KM1).
@@ -25,7 +25,8 @@ The fume extractor of a welding workshop is started and stopped from a push-butt
 - If the emergency stop **S9** is pressed, the motor stops immediately and **H3** blinks (1 s on / 1 s off). After releasing S9, the motor does **not** restart by itself: S1 must be pressed again.
 - **H1** is on whenever KM1 is energised.
 - Fail-safe wiring: S0, S9 and F1 are NC contacts, so they are TRUE in normal operation and the program uses normally open contacts for them.
-
+- Hardwired safety: a second NC contact of S9 (21-22) is wired in series with the KM1 coil, so the emergency stop cuts the motor even if the PLC fails.
+  
 Logic (equivalent in Structured Text):
 
     KM1 := (S1 OR KM1) AND S0 AND F1 AND S9;
@@ -38,7 +39,8 @@ Logic (equivalent in Structured Text):
 ## Files
 - `01-start-stop.project` – CODESYS project
 - `screenshot.png` – program running in simulation
-
+- `diagram-hardwired.pdf` – same function in hardwired relay logic (no PLC)
+  
 ## Test table
 
 | # | Action | Expected result | OK |
