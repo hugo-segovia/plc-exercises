@@ -37,9 +37,21 @@ Logic (equivalent in Structured Text):
     H3  := KA1 AND NOT KA2;
 
 ## Files
-- `01-start-stop.project` – CODESYS project
-- `screenshot.png` – program running in simulation
-- `diagram-hardwired.pdf` – same function in hardwired relay logic (no PLC)
+- `Marcha-Paro v2.project` – CODESYS project
+- `Cade_simu PLC.png` – PLC wiring diagram
+- `Diagram-hardwire V2.png` – same function in hardwired relay logic (no PLC)
+
+### Program running (emergency stop active, H3 blinking)
+![Program running](Running%20mode.png)
+
+### Variables
+![Variables](Variables.png)
+
+### PLC wiring diagram
+![PLC wiring diagram](Cade_simu%20PLC.png)
+
+### Hardwired version
+![Hardwired version](Diagram-hardwire%20V2.png)
   
 ## Test table
 
