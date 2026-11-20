@@ -28,32 +28,32 @@ A motorised sliding door at the entrance of a warehouse. The motor turns in one 
 - Network order matters: request SETs first, then motor SETs (including timers), then all RESETs, so stop always has priority.
 
 ## Files
-- `02-reversing.project` – CODESYS project
+- `02-reversing.project.project` – CODESYS project
 
 ### PLC wiring diagram
-![PLC wiring diagram](diagram-plc.png)
+![PLC wiring diagram](diagram-plc.png.png)
 
 ### Program
 Networks 1–7:
-![Program part 1](screenshot-program-1.png)
+![Program part 1](screenshot-program-1.png.png)
 
 Networks 8–10:
-![Program part 2](screenshot-program-2.png)
+![Program part 2](screenshot-program-2.png.png)
 
 Networks 10–13:
-![Program part 3](screenshot-program-3.png)
+![Program part 3](screenshot-program-3.png.png)
 
 ### Variables
-![Variables](screenshot-variables.png)
+![Variables](screenshot-variables.png.png)
 
 ### Running: opening (KM1)
-![KM1](screenshot-km1.png)
+![KM1](screenshot-km1.png.png)
 
 ### Running: closing (KM2)
-![KM2](screenshot-km2.png)
+![KM2](screenshot-km2.png.png)
 
 ### Overload tripped (F1)
-![F1](screenshot-f1.png)
+![F1](screenshot-f1.png.png)
 
 ## Test table
 
