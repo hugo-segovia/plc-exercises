@@ -46,7 +46,7 @@ A motorised sliding door at the entrance of a warehouse. The motor turns in one 
 ![KM2](KM2-ex2-v2)
 
 ### Overload tripped (F1)
-![F1](F1-ex2-v2)
+![F1](02-reversing/F1-ex2-v2.png)
 
 ## Test table
 
