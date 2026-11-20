@@ -31,22 +31,22 @@ A motorised sliding door at the entrance of a warehouse. The motor turns in one 
 - `02-reversing.project` – CODESYS project
 
 ### PLC wiring diagram
-![PLC wiring diagram](diagram-plc.png)
+![PLC wiring diagram](PLC-ex2-v2)
 
 ### Program
-![Program](screenshot-program.png)
+![Program](1-7-20%ex2-v2,8-10-ex2-v2,10-13-ex2-v2)
 
 ### Variables
-![Variables](screenshot-variables.png)
+![Variables](Variables-ex2-v2)
 
 ### Running: opening (KM1)
-![KM1](screenshot-km1.png)
+![KM1](KM1-ex2-v2)
 
 ### Running: closing (KM2)
-![KM2](screenshot-km2.png)
+![KM2](KM2-ex2-v2)
 
 ### Overload tripped (F1)
-![F1](screenshot-f1.png)
+![F1](F1-ex2-v2)
 
 ## Test table
 
