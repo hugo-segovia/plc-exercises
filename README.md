@@ -28,7 +28,7 @@ Safety principle applied in all exercises: stop buttons, emergency stops and ove
 | # | Exercise | Concepts | Status |
 |---|---|---|---|
 | 01 | [Start/stop of an extractor fan](01-start-stop/) | Self-holding, overload relay, pilot lights | ✅ Basic · ✅ Extension |
-| 02 | Reversing a sliding door motor | Interlocking (software + hardware), limit switches | ✅ |
+| 02 | [Reversing a sliding door motor](02-reversing/) | Interlocking (software + hardware), SET/RESET, timers, limit switches, sensor fault detection | ✅ v3 |
 | 03 | Star-delta start of a compressor | Timers (TON), sequence, interlocking | ⏳ |
 | 04 | Pedestrian traffic light | GRAFCET, sequences, blinking | ⏳ |
 | 05 | Part counter on a packaging line | Counters (CTU), edge detection | ⏳ |
