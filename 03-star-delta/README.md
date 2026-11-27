@@ -55,6 +55,7 @@ A 15 kW air compressor in a workshop. To limit the starting current, the motor s
 ### Program
 ![Program part 1](screenshot-program-1.png)
 ![Program part 2](screenshot-program-2.png)
+![Program part 3](screenshot-program-3.png)
 
 ### Variables
 ![Variables](screenshot-variables.png)
